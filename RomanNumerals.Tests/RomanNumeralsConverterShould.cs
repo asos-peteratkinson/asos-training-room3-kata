@@ -15,6 +15,13 @@ public class RomanNumeralsConverterShould
         var result = RomanNumeralConverter.Convert(1);
         Assert.That(result, Is.EqualTo("I"));
     }
+
+	[Test]
+	public void ReturnII_WhenInputIs2()
+	{
+		var result = RomanNumeralConverter.Convert(2);
+		Assert.That(result, Is.EqualTo("II"));
+	}
 }
 
 /*
