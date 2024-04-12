@@ -7,6 +7,7 @@ public class RomanNumeralConverter
         { 1, "I" }
         , { 4, "IV" }
         , { 5, "V" }
+        , {9, "IX"}
     };
  
 

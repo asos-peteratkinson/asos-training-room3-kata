@@ -36,15 +36,16 @@ public class RomanNumeralsConverterShould
     public void ReturnNumeral_WhenNumberIs9()
 	{
         var result = RomanNumeralConverter.Convert(9);
-        Assert.That(result, Is.EqualTo("X"));
+        Assert.That(result, Is.EqualTo("IX"));
     }
 
-	//[Test]
-	//public void ReturnVNumeral_WhenInputIs5()
-	//{
-	//	var result = RomanNumeralConverter.Convert(5);
-	//	Assert.That(result, Is.EqualTo("V"));
-	//}
+	[Test]
+	public void ReturnNumeral_WhenNumberIs10()
+	{
+		var result = RomanNumeralConverter.Convert(9);
+		Assert.That(result, Is.EqualTo("X"));
+	}
+
 }
 
 /*
