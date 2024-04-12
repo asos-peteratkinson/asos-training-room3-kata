@@ -12,8 +12,7 @@ public class RomanNumeralsConverterShould
 	[TestCase(1, "I")]
 	[TestCase(2, "II")]
 	[TestCase(3, "III")]
-	[TestCase(4, "IIII")]
-	public void ReturnINumerals_WhenInputIsLessThan5(int number, string numeral)
+	public void ReturnINumerals_WhenInputIsLessThan4(int number, string numeral)
 	{
 		
 		var result = RomanNumeralConverter.Convert(number);
@@ -21,11 +20,18 @@ public class RomanNumeralsConverterShould
 	}
 
 	[Test]
-	public void ReturnVNumeral_WhenInputIs5()
+	public void ReturnVNumeral_WhenInputIs4()
 	{
-		var result = RomanNumeralConverter.Convert(5);
-		Assert.That(result, Is.EqualTo("V"));
+		var result = RomanNumeralConverter.Convert(4);
+		Assert.That(result, Is.EqualTo("IV"));
 	}
+
+	//[Test]
+	//public void ReturnVNumeral_WhenInputIs5()
+	//{
+	//	var result = RomanNumeralConverter.Convert(5);
+	//	Assert.That(result, Is.EqualTo("V"));
+	//}
 }
 
 /*

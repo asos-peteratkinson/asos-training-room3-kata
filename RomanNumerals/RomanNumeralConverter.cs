@@ -2,13 +2,24 @@
 
 public class RomanNumeralConverter
 {
-    private static string[] numerals = new[] { "I", "II", "III", "IIII" };
+    private static Dictionary<int, string> _numerals = new Dictionary<int, string>()
+    {
+        { 1, "I" }
+    };
+ 
 
     public static string Convert(int number)
     {
         if (number <= 0) return null;
 
-		return numerals[number -1] ;
+        var numeralStr = string.Empty;
+        
+        for(int i = 0; i < number; i++)
+        {
+            numeralStr += _numerals[1];
+        }
+
+        return numeralStr;
     }
 }
 
