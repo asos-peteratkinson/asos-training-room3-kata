@@ -22,6 +22,13 @@ public class RomanNumeralsConverterShould
 		var result = RomanNumeralConverter.Convert(2);
 		Assert.That(result, Is.EqualTo("II"));
 	}
+
+	[Test]
+	public void ReturnIII_WhenInputIs3()
+	{
+        var result = RomanNumeralConverter.Convert(3);
+        Assert.That(result, Is.EqualTo("III"));
+    }
 }
 
 /*

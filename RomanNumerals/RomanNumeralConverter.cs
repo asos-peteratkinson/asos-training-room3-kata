@@ -4,7 +4,14 @@ public class RomanNumeralConverter
 {
     public static string Convert(int number)
     {
-        return "I";
+        if (number <= 0) return null;
+
+        if (number == 1)
+        {
+            return "I";
+        }
+
+        return "II";
     }
 }
 
