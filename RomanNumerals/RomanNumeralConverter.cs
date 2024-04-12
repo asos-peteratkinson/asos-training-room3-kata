@@ -8,6 +8,7 @@ public class RomanNumeralConverter
         , { 4, "IV" }
         , { 5, "V" }
         , {9, "IX"}
+        , {10, "X"}
     };
  
 
@@ -19,6 +20,7 @@ public class RomanNumeralConverter
         {
             return _numerals[number];
         }
+
 
         if (number < 4)
         {

@@ -42,9 +42,16 @@ public class RomanNumeralsConverterShould
 	[Test]
 	public void ReturnNumeral_WhenNumberIs10()
 	{
-		var result = RomanNumeralConverter.Convert(9);
+		var result = RomanNumeralConverter.Convert(10);
 		Assert.That(result, Is.EqualTo("X"));
 	}
+
+    [Test]
+    public void ReturnNumeral_WhenNumberIs11()
+    {
+        var result = RomanNumeralConverter.Convert(11);
+        Assert.That(result, Is.EqualTo("XI"));
+    }
 
 }
 
