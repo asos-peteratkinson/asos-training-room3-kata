@@ -27,12 +27,17 @@ public class RomanNumeralConverter
 	        return _numerals[1] + Convert(number - 1);
         }
 
-        if (number > 5)
+        if (number > 10)
         {
-            return "V" + Convert(number - 5);
+	        return "X" + Convert(number - 10);
         }
 
-        return _numerals[1] + Convert(number - 1);
+        if (number > 5)
+        {
+	        return "V" + Convert(number - 5);
+        }
+
+		return _numerals[1] + Convert(number - 1);
     }
 }
 
