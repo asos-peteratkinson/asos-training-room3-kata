@@ -2,16 +2,13 @@
 
 public class RomanNumeralConverter
 {
+    private static string[] numerals = new[] { "I", "II", "III", "IIII" };
+
     public static string Convert(int number)
     {
         if (number <= 0) return null;
 
-        if (number == 1)
-        {
-            return "I";
-        }
-
-        return "II";
+		return numerals[number -1] ;
     }
 }
 

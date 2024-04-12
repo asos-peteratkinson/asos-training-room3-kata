@@ -9,26 +9,23 @@ public class RomanNumeralsConverterShould
 		Assert.That(result, Is.Null);
 	}
 
-	[Test]
-	public void ReturnI_WhenInputIs1()
+	[TestCase(1, "I")]
+	[TestCase(2, "II")]
+	[TestCase(3, "III")]
+	[TestCase(4, "IIII")]
+	public void ReturnINumerals_WhenInputIsLessThan5(int number, string numeral)
 	{
-        var result = RomanNumeralConverter.Convert(1);
-        Assert.That(result, Is.EqualTo("I"));
-    }
-
-	[Test]
-	public void ReturnII_WhenInputIs2()
-	{
-		var result = RomanNumeralConverter.Convert(2);
-		Assert.That(result, Is.EqualTo("II"));
+		
+		var result = RomanNumeralConverter.Convert(number);
+		Assert.That(result, Is.EqualTo(numeral));
 	}
 
 	[Test]
-	public void ReturnIII_WhenInputIs3()
+	public void ReturnVNumeral_WhenInputIs5()
 	{
-        var result = RomanNumeralConverter.Convert(3);
-        Assert.That(result, Is.EqualTo("III"));
-    }
+		var result = RomanNumeralConverter.Convert(5);
+		Assert.That(result, Is.EqualTo("V"));
+	}
 }
 
 /*
