@@ -3,11 +3,18 @@ namespace RomanNumerals.Tests;
 public class RomanNumeralsConverterShould
 {
 	[Test]
-	public void ReturnEmpty_WhenInputIsZero()
+	public void ReturnNull_WhenInputIsZero()
 	{
 		var result = RomanNumeralConverter.Convert(0);
-		Assert.That(result, null);
+		Assert.That(result, Is.Null);
 	}
+
+	[Test]
+	public void ReturnI_WhenInputIs1()
+	{
+        var result = RomanNumeralConverter.Convert(1);
+        Assert.That(result, Is.EqualTo("I"));
+    }
 }
 
 /*
@@ -25,5 +32,5 @@ public class RomanNumeralsConverterShould
 - expression->function
 - variable->assignment
 
-*//
+*/
 
