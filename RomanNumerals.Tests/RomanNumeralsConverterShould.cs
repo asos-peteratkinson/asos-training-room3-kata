@@ -47,7 +47,6 @@ public class RomanNumeralsConverterShould
 		Assert.That(result, Is.EqualTo("VII"));
 	}
 
-
 	//[Test]
 	//public void ReturnVNumeral_WhenInputIs5()
 	//{
