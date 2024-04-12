@@ -20,10 +20,17 @@ public class RomanNumeralsConverterShould
 	}
 
 	[Test]
-	public void ReturnVNumeral_WhenInputIs4()
+	public void ReturnIVNumeral_WhenInputIs4()
 	{
 		var result = RomanNumeralConverter.Convert(4);
 		Assert.That(result, Is.EqualTo("IV"));
+	}
+
+	[Test]
+	public void ReturnVNumeral_WhenInputIs5()
+	{
+		var result = RomanNumeralConverter.Convert(5);
+		Assert.That(result, Is.EqualTo("V"));
 	}
 
 	//[Test]

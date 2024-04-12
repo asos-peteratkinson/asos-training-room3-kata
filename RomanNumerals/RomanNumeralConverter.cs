@@ -19,6 +19,8 @@ public class RomanNumeralConverter
             numeralStr += _numerals[1];
         }
 
+        if (number == 4) return "IV";
+
         return numeralStr;
     }
 }
