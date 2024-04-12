@@ -2,6 +2,12 @@ namespace RomanNumerals.Tests;
 
 public class RomanNumeralsConverterShould
 {
+	[Test]
+	public void ReturnEmpty_WhenInputIsZero()
+	{
+		var result = RomanNumeralConverter.Convert(0);
+		Assert.That(result, null);
+	}
 }
 
 /*
