@@ -1,9 +1,11 @@
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 namespace RomanNumerals.Tests;
 
 public class RomanNumeralsConverterShould
 {
 	[Test]
-	public void ReturnNull_WhenInputIsZero()
+	public void ReturnNull_WhenNumberIsZero()
 	{
 		var result = RomanNumeralConverter.Convert(0);
 		Assert.That(result, Is.Null);
@@ -12,40 +14,30 @@ public class RomanNumeralsConverterShould
 	[TestCase(1, "I")]
 	[TestCase(2, "II")]
 	[TestCase(3, "III")]
-	public void ReturnINumerals_WhenInputIsLessThan4(int number, string numeral)
+	public void ReturnINumerals_WhenNumberIsLessThan4(int number, string numeral)
 	{
 		
 		var result = RomanNumeralConverter.Convert(number);
 		Assert.That(result, Is.EqualTo(numeral));
 	}
 
-	[Test]
-	public void ReturnIVNumeral_WhenInputIs4()
-	{
-		var result = RomanNumeralConverter.Convert(4);
-		Assert.That(result, Is.EqualTo("IV"));
-	}
 
-	[Test]
-	public void ReturnVNumeral_WhenInputIs5()
+    [TestCase(4, "IV")]
+    [TestCase(5, "V")]
+    [TestCase(6, "VI")]
+    [TestCase(7, "VII")]
+	public void ReturnNumeral_WhenNumberLessThan8GreaterThan3(int number, string numeral)
 	{
-		var result = RomanNumeralConverter.Convert(5);
-		Assert.That(result, Is.EqualTo("V"));
-	}
-
-    [Test]
-    public void ReturnVINumeral_WhenInputIs6()
-    {
-        var result = RomanNumeralConverter.Convert(6);
-        Assert.That(result, Is.EqualTo("VI"));
+        var result = RomanNumeralConverter.Convert(number);
+        Assert.That(result, Is.EqualTo(numeral));
     }
 
 	[Test]
-	public void ReturnVIINumeral_WhenInputIs7()
+    public void ReturnNumeral_WhenNumberIs9()
 	{
-		var result = RomanNumeralConverter.Convert(7);
-		Assert.That(result, Is.EqualTo("VII"));
-	}
+        var result = RomanNumeralConverter.Convert(9);
+        Assert.That(result, Is.EqualTo("X"));
+    }
 
 	//[Test]
 	//public void ReturnVNumeral_WhenInputIs5()

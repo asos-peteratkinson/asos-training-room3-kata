@@ -5,6 +5,7 @@ public class RomanNumeralConverter
     private static Dictionary<int, string> _numerals = new Dictionary<int, string>()
     {
         { 1, "I" }
+        , { 4, "IV" }
         , { 5, "V" }
     };
  
@@ -17,17 +18,18 @@ public class RomanNumeralConverter
         {
             return _numerals[number];
         }
+
         if (number < 4)
         {
 	        return _numerals[1] + Convert(number - 1);
         }
 
-        if (number == 4)
+        if (number > 5)
         {
-	        return "IV";
+            return "V" + Convert(number - 5);
         }
-        return _numerals[number - 1] + _numerals[1];
 
+        return _numerals[1] + Convert(number - 1);
     }
 }
 
