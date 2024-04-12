@@ -40,12 +40,20 @@ public class RomanNumeralsConverterShould
         Assert.That(result, Is.EqualTo("VI"));
     }
 
-    //[Test]
-    //public void ReturnVNumeral_WhenInputIs5()
-    //{
-    //	var result = RomanNumeralConverter.Convert(5);
-    //	Assert.That(result, Is.EqualTo("V"));
-    //}
+	[Test]
+	public void ReturnVIINumeral_WhenInputIs7()
+	{
+		var result = RomanNumeralConverter.Convert(7);
+		Assert.That(result, Is.EqualTo("VII"));
+	}
+
+
+	//[Test]
+	//public void ReturnVNumeral_WhenInputIs5()
+	//{
+	//	var result = RomanNumeralConverter.Convert(5);
+	//	Assert.That(result, Is.EqualTo("V"));
+	//}
 }
 
 /*

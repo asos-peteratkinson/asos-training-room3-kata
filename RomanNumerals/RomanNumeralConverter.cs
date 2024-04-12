@@ -5,6 +5,7 @@ public class RomanNumeralConverter
     private static Dictionary<int, string> _numerals = new Dictionary<int, string>()
     {
         { 1, "I" }
+        , { 5, "V" }
     };
  
 
@@ -12,17 +13,21 @@ public class RomanNumeralConverter
     {
         if (number <= 0) return null;
 
-        var numeralStr = string.Empty;
-        
-        for(int i = 0; i < number; i++)
+        if (_numerals.ContainsKey(number))
         {
-            numeralStr += _numerals[1];
+            return _numerals[number];
+        }
+        if (number < 4)
+        {
+	        return _numerals[1] + Convert(number - 1);
         }
 
-        if (number == 4) return "IV";
-        if (number == 5) return "V";
+        if (number == 4)
+        {
+	        return "IV";
+        }
+        return _numerals[number - 1] + _numerals[1];
 
-        return numeralStr;
     }
 }
 
